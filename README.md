@@ -62,8 +62,8 @@ p <- final_steps_vs_calories %>%
   ggplot(aes(x = total_steps, y = total_cal)) +
   geom_point() +
   geom_smooth(method = "lm", color = "blue") +
-  geom_jitter() +
-  labs(title = "Average Steps vs Calories Expenditure", 
+ geom_text(aes(label = Id) +
+ labs(title = "Average Steps vs Calories Expenditure", 
        subtitle = "from 12/04/16 to 12/05/16", 
        x = "Average Steps", 
        y = "Calories Expenditure")
