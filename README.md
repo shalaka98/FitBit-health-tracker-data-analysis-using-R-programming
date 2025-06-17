@@ -14,18 +14,22 @@ library(tidyverse)
 ## data uploded
 ```r
 dailyactivity <- read.csv("/kaggle/input/dailyactivity/dailyactivity_merged _original.csv")
-head(dailyactivity)
+View(dailyactivity)
 ```
 
 ## Cleaning the Data
 #### Select Relevant Columns
 ```r
 steps_vs_calories <- dailyactivity %>% select(Id, TotalSteps, Calories, ActivityDate)
+
+steps_vs_calories
 ```
 
 #### Check for Missing Ids
 ```r
 steps_vs_calories %>% summarize(sum(is.na(Id)))
+
+steps_vs_calories
 ```
 
 #### Convert Date Format
