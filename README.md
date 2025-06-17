@@ -8,6 +8,7 @@ Path: `/kaggle/input/fitbit`
 
 ## Package Loading
 ```r
+install.packages("tidyverse")
 library(tidyverse)
 ```
 
