@@ -34,16 +34,12 @@ steps_vs_calories
 ```
 
 
-#### Filter Out Missing Steps
-```r
-filtered_steps_vs_calories <- steps_vs_calories %>% filter(!is.na(TotalSteps))
-```
 
 #### Group by ID and Compute Averages
 ```r
 final_steps_vs_calories <- filtered_steps_vs_calories %>% 
   group_by(Id) %>% 
-  summarise(total_cal = mean(Calories), total_steps = mean(TotalSteps)) 
+  summarise(total_cal = mean(Calories,na.rm= TRUE), total_steps = mean(TotalSteps,na.rm= TRUE)) 
 head(final_steps_vs_calories)
 ```
 
