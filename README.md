@@ -33,10 +33,6 @@ steps_vs_calories %>% summarize(sum(is.na(Id)))
 steps_vs_calories
 ```
 
-#### Convert Date Format
-```r
-steps_vs_calories$ActivityDate <- as.Date(steps_vs_calories$ActivityDate, format = "%Y-%m-%d")
-```
 
 #### Filter Out Missing Steps
 ```r
