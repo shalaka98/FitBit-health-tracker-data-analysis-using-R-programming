@@ -47,11 +47,6 @@ final_steps_vs_calories <- filtered_steps_vs_calories %>%
 head(final_steps_vs_calories)
 ```
 
-#### Total Steps Comparison (Optional)
-```r
-sum(final_steps_vs_calories$total_steps)
-```
-
 #### Graphical Illustration
 ```r
 p <- final_steps_vs_calories %>% 
