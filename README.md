@@ -21,7 +21,7 @@ View(dailyactivity)
 ## Cleaning the Data
 #### Select Relevant Columns
 ```r
-steps_vs_calories <- dailyactivity %>% select(Id, TotalSteps, Calories, ActivityDate)
+steps_vs_calories <- dailyactivity %>% select(Id, TotalSteps, Calories)
 
 steps_vs_calories
 ```
